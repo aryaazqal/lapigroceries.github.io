@@ -664,6 +664,108 @@ footer {
 
 
 }
+
+@media (max-width: 410px) {
+    /* Header Styling */
+    header {
+        padding: 0.5rem 10px; /* Mengurangi padding horizontal */
+    }
+
+    /* Logo Styling */
+    .logo-container {
+        font-size: 1.2em; /* Ukuran font logo lebih kecil */
+        padding: 3px 7px; /* Padding lebih kecil */
+    }
+
+    /* Carousel Banner Styling */
+    .carousel-item img {
+        height: 150px; /* Tinggi gambar disesuaikan */
+    }
+
+     /* Kategori Styling */
+     .category-container {
+        justify-content: space-between; /* Mengatur jarak antar kartu kategori */
+    }
+
+    .category-card {
+        flex-basis: calc(33.333% - 10px); /* Membuat tiga kartu per baris */
+        margin: 5px; /* Menyesuaikan margin untuk lebih rapi */
+    }
+
+    .category-icon {
+        font-size: 1.5em; /* Ukuran ikon lebih kecil */
+    }
+
+    .category-button {
+        font-size: 0.7em; /* Ukuran teks tombol lebih kecil */
+    }
+
+    /* Produk Unggulan Styling */
+    .product-card {
+        width: calc(50% - 10px); /* Mengatur lebar untuk dua produk per baris */
+    }
+
+    .product-image {
+        height: 100px; /* Menyesuaikan tinggi gambar */
+    }
+
+    .product-details {
+        padding: 2px; /* Padding lebih kecil */
+    }
+
+    .product-name, .product-price {
+        font-size: 0.65em; /* Ukuran font lebih kecil */
+    }
+
+    .add-to-cart-button {
+        padding: 3px; /* Padding tombol lebih kecil */
+        font-size: 0.65em; /* Ukuran font tombol lebih kecil */
+    }
+
+    /* Item Produk Styling */
+    .category-section .items-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Membuat dua kolom */
+        gap: 10px; /* Menambahkan jarak antar item */
+    }
+
+    .category-section .item-card {
+        width: 100%; /* Kartu mengisi kolom */
+        box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+    }
+
+    .category-section .item-image {
+        height: 100px; /* Tinggi gambar disesuaikan */
+    }
+
+    .item-name, .item-price {
+        font-size: 0.8em; /* Menyesuaikan ukuran teks */
+    }
+
+    .product-quantity-controls button {
+        padding: 3px 6px; /* Menyesuaikan ukuran tombol */
+        font-size: 0.7em; /* Menyesuaikan ukuran teks tombol */
+    }
+
+    .product-quantity-controls .quantity-count {
+        font-size: 0.8em; /* Menyesuaikan ukuran angka */
+    }
+
+    footer {
+        padding: 10px 3%; /* Mengurangi padding secara horizontal */
+    }
+
+    .footer-nav-list {
+        justify-content: space-around; /* Menyebarkan item secara merata */
+        gap: 5px; /* Mengurangi jarak antar item */
+    }
+
+    .footer-nav-list .nav-item a {
+        font-size: 1em; /* Mengurangi ukuran ikon lebih lanjut */
+        padding: 3px; /* Mengurangi padding sekitar ikon */
+    }
+}
+
    
 /* Adjustments for Larger Screens */
 @media (min-width: 600px) {
@@ -673,77 +775,6 @@ footer {
 
     .nav .shop-now-button {
         font-size: 1.5em;
-    }
-}
-
-/* TAMPILAN MOBILE kecil */
-/* TAMPILAN MOBILE 360px */
-@media (max-width: 360px) {
-    .category-section .items-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Membuat dua kolom dengan lebar yang sama */
-        gap: 8px; /* Jarak antar item disesuaikan agar cukup */
-    }
-
-    .category-section .item-card {
-        width: 100%; /* Membuat item card memenuhi kolom grid */
-        /* Menyesuaikan padding agar konten tidak terlalu penuh */
-        padding: 8px;
-    }
-
-    /* Menyesuaikan ukuran gambar agar sesuai dengan ukuran kartu yang lebih kecil */
-    .item-image {
-        height: 100px; /* Atau nilai lain yang lebih sesuai */
-    }
-
-    /* Menyesuaikan ukuran teks agar sesuai dengan ukuran kartu yang lebih kecil */
-    .item-name, .item-price {
-        font-size: 0.7em; /* Atau nilai lain yang lebih sesuai */
-    }
-
-    /* Menyesuaikan ukuran tombol jika diperlukan */
-    .product-quantity-controls button {
-        padding: 4px 8px; /* Atau nilai lain yang lebih sesuai */
-        font-size: 0.7em; /* Atau nilai lain yang lebih sesuai */
-    }
-
-    .product-quantity-controls .quantity-count {
-        font-size: 0.7em; /* Atau nilai lain yang lebih sesuai */
-    }
-
-     /* Penyesuaian untuk pilihan kategori menjadi 3 kolom */
-     .category-container {
-        justify-content: space-between; /* Menjaga agar item tetap berjarak rata */
-    }
-    .category-card {
-        flex-basis: 30%; /* Mengubah lebar untuk 3 item per baris */
-        margin: 5px; /* Mengurangi margin untuk menyesuaikan */
-    }
-    .category-icon {
-        font-size: 1.5em; /* Mengubah ukuran ikon */
-    }
-    .category-button {
-        font-size: 0.7em; /* Mengubah ukuran teks */
-    }
-
-    footer {
-        padding-left: 10px; /* Tambahkan padding di kiri */
-        padding-right: 10px; /* Tambahkan padding di kanan */
-    }
-
-    /* Kurangi ukuran font ikon di footer untuk mencegah terpotong */
-    .footer-nav-list .nav-item a {
-        font-size: 1em; /* Atau ukuran yang cukup kecil agar tidak terpotong */
-    }
-
-    /* Atur ulang margin dan padding ikon di footer untuk responsivitas */
-    .footer-nav-list {
-        gap: 10px; /* Mengurangi gap antar ikon */
-    }
-
-    .footer-nav-list .nav-item {
-        margin: 0; /* Hilangkan margin ekstra jika ada */
-        padding: 0; /* Hilangkan padding ekstra jika ada */
     }
 }
 
