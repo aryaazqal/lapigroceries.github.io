@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapi Groceries - Home</title>
+    <!-- font Google Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header id="header">
+    <div class="header-inner">
+        <h1 class="logo-container">Lapi Groceries</h1>
+        <nav>
+            <a href="#shop-now" class="shop-now-button"><i class="fa fa-shopping-cart"></i></a>
+        </nav>
+    </div>
+</header>
+<!-- End of Header Section -->
+
+<!-- Main Content -->
+<main>
+<!-- Alert Pengumuman -->
+<div id="announcementAlert" class="custom-alert" style="display:none;">
+    <div class="custom-alert-content">
+        <span class="custom-alert-close" onclick="closeAnnouncementAlert()">&times;</span>
+        <p id="announcementMessage">Selamat datang di Lapi Groceries!</p>
+        <a href="#featured-products" class="start-shopping-button">Mulai Berbelanja</a>
+    </div>
+</div>
+<!-- End of Alert Pengumuman -->
+
+<!-- Alret Custom Keranjang -->
+<div id="customAlert" class="custom-alert" style="display:none;">
+    <div class="custom-alert-content">
+        <!-- Ikon Kembali Belanja di pojok kiri atas -->
+        <button onclick="closeCustomAlert()" class="continue-shopping-btn">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+        <!-- /Ikon Kembali Belanja -->
+        <span class="custom-alert-close" onclick="closeCustomAlert()">&times;</span>
+        <p id="alertMessage">Ini adalah pesan.</p>
+        <a id="whatsappLink" href="#" class="whatsapp-order-button">Pesan Sekarang</a> <!-- Tombol Pesan Sekarang -->
+    </div>
+</div>
+
+    
+    <!-- end of Alret Custom -->
+<!-- Carousel Banner -->
+    <!-- Carousel Banner -->
+<section class="carousel" aria-label="Featured Products">
+    <button id="prevBtn" class="btn" aria-label="Previous Slide">&#9664;</button>
+    <button id="nextBtn" class="btn" aria-label="Next Slide">&#9654;</button>
+    <div class="carousel-container">
+        <!-- Carousel Item Card hanya dengan gambar yang clickable -->
+    </div>
+</section>
+<!-- End of Carousel Banner -->
+
+<!-- Bagian kategori -->
+<section id="categories">
+    <h2>Pilihan Category</h2>
+    <div class="category-container">
+        <!-- Kartu untuk setiap kategori -->
+        <div class="category-card">
+            <i class="fa fa-leaf category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('vegetables').scrollIntoView()" class="category-button">Sayuran</button>
+        </div>
+
+        <div class="category-card">
+            <i class="fa fa-drumstick-bite category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('meat-fish').scrollIntoView()" class="category-button">Daging & Ikan</button>
+        </div>
+
+        <div class="category-card">
+            <i class="fa fa-bread-slice category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('groceries').scrollIntoView()" class="category-button">Sembako</button>
+        </div>
+        
+        <div class="category-card">
+            <i class="fa fa-utensils category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('ready-to-cook').scrollIntoView()" class="category-button">Paket Siap Masak</button>
+        </div>
+
+        <div class="category-card">
+            <i class="fa fa-solid fa-fire-flame-simple category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('gas-water').scrollIntoView()" class="category-button">Gas & Air</button>
+        </div>
+
+        <div class="category-card">
+            <i class="fa fa-apple-alt category-icon" aria-hidden="true"></i>
+            <button onclick="document.getElementById('fruits').scrollIntoView()" class="category-button">Buah</button>
+        </div>
+
+        <!-- Tambahkan kartu lainnya dengan ikon dan link sesuai -->
+    </div>
+</section>
+<!-- akhir bagian kategori -->
+
+<!-- Produk Unggulan -->
+<section id="featured-products">
+    <h2>Produk Unggulan</h2>
+    <div class="product-container">
+    </div>
+</section>
+<!-- akhir produk unggulan -->
+
+<!-- ITEM PRODUK -->
+<!-- Section Sayuran -->
+<section id="vegetables" class="category-section">
+    <h2>Sayuran</h2>
+    <div class="items-container" id="vegetable-items">
+        <!-- Item-item sayuran akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- Section Daging & Ikan -->
+<section id="meat-fish" class="category-section">
+    <h2>Daging & Ikan</h2>
+    <div class="items-container" id="meat-fish-items">
+        <!-- Item-item daging & ikan akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- Section Sembako -->
+<section id="groceries" class="category-section">
+    <h2>Sembako</h2>
+    <div class="items-container" id="grocery-items">
+        <!-- Item-item sembako akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- Section Paket Siap Masak -->
+<section id="ready-to-cook" class="category-section">
+    <h2>Paket Siap Masak</h2>
+    <div class="items-container" id="ready-to-cook-items">
+        <!-- Item-item paket siap masak akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- Section Gas & Air -->
+<section id="gas-water" class="category-section">
+    <h2>Gas & Air</h2>
+    <div class="items-container" id="gas-water-items">
+        <!-- Item-item gas & air akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- Section Buah -->
+<section id="fruits" class="category-section">
+    <h2>Buah</h2>
+    <div class="items-container" id="fruit-items">
+        <!-- Item-item buah akan ditambahkan di sini -->
+    </div>
+</section>
+
+<!-- AKHIR SECTION ITEM PRODUK -->
+
+
+</main>
+<!-- End of Main Content -->
+
+<!-- Footer Section -->
+<footer>
+    <nav id="footer-navbar" class="footer-navbar">
+        <ul class="footer-nav-list">
+            <!-- Ikon navigasi kategori di sisi kiri -->
+            <li class="nav-item"><a href="#vegetables"><i class="fa fa-leaf"></i></a></li>
+            <li class="nav-item"><a href="#meat-fish"><i class="fa fa-drumstick-bite"></i></a></li>
+            <li class="nav-item"><a href="#groceries"><i class="fa fa-bread-slice"></i></a></li>
+
+            <!-- Ikon keranjang utama di tengah -->
+            <li class="nav-item"><a href="javascript:void(0);" class="footer-shop-now-button"><i class="fa fa-shopping-cart"></i></a></li>
+
+            <!-- Ikon navigasi kategori di sisi kanan -->
+            <li class="nav-item"><a href="#ready-to-cook"><i class="fa fa-utensils"></i></a></li>
+            <li class="nav-item"><a href="#gas-water"><i class="fa fa-fire"></i></a></li>
+            <li class="nav-item"><a href="#fruits"><i class="fa fa-apple-alt"></i></a></li>
+
+        </ul>
+    </nav>
+</footer>
+
+<!-- End of Footer Section -->
+
+
+<!-- JavaScript File -->
+<script src="index.js"></script>
+</body>
+</html>
